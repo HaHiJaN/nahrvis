@@ -1,0 +1,1095 @@
+/* 1. Theme Color Variables */
+:root {
+    --primary-bg: #0B101B;
+    --secondary-bg: #151E2D;
+    --accent-red: #A91D2A;
+    --accent-gold: #D6A34B;
+    --accent-cyan: #36C5E5;
+    --text-light: #E8EDF5;
+    --text-muted: #A9B4C5;
+}
+
+/* 2. Global Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Main Content Layout */
+main {
+    flex: 1;
+}
+
+/* 4. Global Heading Styling */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+/* 5. Global Paragraph Styling */
+p {
+    line-height: 1.7;
+}
+
+/* 6. Hero Section */
+.hero-section {
+    background: linear-gradient(135deg,
+            #151E2D 0%,
+            #0B101B 65%,
+            #43151E 100%);
+
+    padding: 5rem 1rem;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+/* 7. Hero Heading */
+.hero-section h1 {
+    color: #FFFFFF;
+}
+
+/* 8. Hero Description */
+.hero-section .lead {
+    color: var(--accent-gold);
+}
+
+/* 9. Footer Styling */
+.footer {
+    border-top: 1px solid var(--accent-gold);
+    margin-top: auto;
+}
+
+/* 10. Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
+
+.navbar {
+    background-color: #101722 !important;
+    border-bottom: 1px solid var(--accent-gold);
+    padding: 1rem 0;
+}
+
+/* Brand Logo Text */
+.navbar-brand {
+    color: var(--accent-gold) !important;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--accent-cyan) !important;
+}
+
+/* Navigation Links */
+.navbar .nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar .nav-link:hover {
+    color: var(--accent-gold) !important;
+}
+
+/* Active Page Indicator */
+.navbar .nav-link.active {
+    color: var(--accent-gold) !important;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+/* Mobile Navigation */
+@media (max-width: 991px) {
+    .navbar .nav-link {
+        margin-left: 0;
+        padding: 0.75rem 0;
+    }
+
+    .navbar .nav-link.active {
+        border-bottom: none;
+        border-left: 3px solid var(--accent-gold);
+        padding-left: 0.75rem;
+    }
+}
+
+main section h2 {
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+main section h3 {
+    color: var(--accent-cyan);
+    margin-bottom: 1.5rem;
+}
+
+main section h4 {
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+/* Founder Section Description */
+main section .lead {
+    color: var(--text-muted);
+}
+
+/* Founder Profile Image */
+main section img {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    object-fit: cover;
+
+    border: 3px solid var(--accent-gold);
+    border-radius: 16px !important;
+
+    box-shadow: 0 0 25px rgba(214, 163, 75, 0.25) !important;
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Founder Image Hover Effect */
+main section img:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 35px rgba(214, 163, 75, 0.45) !important;
+}
+
+/* Founder Information Text */
+main section p {
+    color: var(--text-light);
+}
+
+/* Founder Information Labels */
+main section strong {
+    color: var(--accent-gold);
+}
+
+/* Mobile Founder Image */
+@media (max-width: 768px) {
+    main section img {
+        max-width: 280px;
+        height: 320px;
+    }
+
+    main section h2 {
+        font-size: 1.8rem;
+    }
+
+    main section h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Booking Form Container */
+#bookingForm {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border: 1px solid rgba(214, 163, 75, 0.3);
+    border-radius: 16px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Fieldsets */
+#bookingForm fieldset {
+    background-color: #101722;
+    border: 1px solid #39475B !important;
+    border-radius: 12px !important;
+}
+
+/* Fieldset Legends */
+#bookingForm legend {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Form Labels */
+#bookingForm .form-label,
+#bookingForm .form-check-label {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Text and Number Inputs */
+#bookingForm .form-control,
+#bookingForm .form-select {
+    background-color: #0B101B;
+    color: var(--text-light);
+    border: 1px solid #526078;
+
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+}
+
+/* Input Placeholder */
+#bookingForm .form-control::placeholder {
+    color: #A9B4C5;
+    opacity: 1;
+}
+
+/* Dropdown Options */
+#bookingForm .form-select option {
+    background-color: #0B101B;
+    color: #E8EDF5;
+}
+
+/* Input Focus Effect */
+#bookingForm .form-control:focus,
+#bookingForm .form-select:focus {
+    background-color: #0B101B;
+    color: #FFFFFF;
+
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 0.2rem rgba(214, 163, 75, 0.2);
+}
+
+/* Checkbox Styling */
+#bookingForm .form-check-input {
+    background-color: #0B101B;
+    border: 1px solid var(--accent-gold);
+    cursor: pointer;
+}
+
+#bookingForm .form-check-input:checked {
+    background-color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+/* Optional Upgrades Description */
+#bookingForm .text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Error Message Spacing */
+#bookingForm .text-danger {
+    margin-top: 0.35rem;
+    font-size: 0.875rem;
+}
+
+/* Mobile Form Layout */
+@media (max-width: 768px) {
+    #bookingForm {
+        padding: 1rem;
+    }
+
+    #bookingForm fieldset {
+        padding: 1rem !important;
+    }
+
+    #bookingForm legend {
+        font-size: 1.05rem;
+    }
+}
+
+#bookingForm .btn-warning {
+    background-color: var(--accent-gold);
+    color: #0B101B;
+    border: 2px solid var(--accent-gold);
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+
+    transition: all 0.3s ease;
+}
+
+/* Calculate Button Hover */
+#bookingForm .btn-warning:hover {
+    background-color: #F0C46B;
+    border-color: #F0C46B;
+    color: #0B101B;
+
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(214, 163, 75, 0.4);
+}
+
+/* Reset Button */
+#bookingForm .btn-outline-secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid #718096;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+
+    transition: all 0.3s ease;
+}
+
+/* Reset Button Hover */
+#bookingForm .btn-outline-secondary:hover {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+    color: #FFFFFF;
+}
+
+/* Keyboard Focus */
+#bookingForm .btn:focus-visible {
+    outline: 3px solid var(--accent-cyan);
+    outline-offset: 3px;
+}
+
+/* Booking Summary Panel */
+#bookingResult {
+    background-color: var(--secondary-bg);
+    border: 2px solid var(--accent-gold) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 0 25px rgba(214, 163, 75, 0.15);
+}
+
+/* Keep Results Hidden Before Calculation */
+#bookingResult[hidden] {
+    display: none !important;
+}
+
+/* Booking Summary Heading */
+#bookingResult h3 {
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+}
+
+/* Booking Result Details */
+#resultDetails {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Result Text Labels */
+#resultDetails strong {
+    color: var(--accent-gold);
+}
+
+/* Mobile Button Layout */
+@media (max-width: 576px) {
+    #bookingForm .btn {
+        width: 100%;
+    }
+}
+
+.hero-section {
+    position: relative;
+
+    /* Cinematic armory background */
+    background-image:
+            linear-gradient(90deg,
+                rgba(8, 8, 12, 0.68) 0%,
+                rgba(15, 5, 9, 0.48) 50%,
+                rgba(8, 8, 12, 0.30) 100%),
+            url("../images/WelcomeBG.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Hero dimensions */
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 90px 24px;
+
+    /* Red and gold details */
+    border-bottom: 2px solid #D6A34B;
+    box-shadow: inset 0 -50px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* Keep hero content above the background */
+.hero-section>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Main heading */
+.hero-section h1 {
+    color: #FFFFFF;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+}
+
+/* Supporting text */
+.hero-section p {
+    color: #F0E7E2;
+    line-height: 1.8;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* Hero call-to-action button */
+.hero-section .btn {
+    background: linear-gradient(135deg,
+            #D6A34B,
+            #F0C66E);
+
+    color: #101015;
+    border: 1px solid #F0C66E;
+
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 6px;
+
+    box-shadow: 0 6px 25px rgba(214, 163, 75, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background: #F0C66E;
+    color: #101015;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 30px rgba(214, 163, 75, 0.45);
+}
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        min-height: 420px;
+
+        padding: 70px 20px;
+
+        background-position: 58% center;
+
+        background-image:
+            linear-gradient(rgba(8, 8, 12, 0.86),
+                rgba(15, 5, 9, 0.82)),
+            url("../images/WelcomeBG.png");
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+    }
+
+    .hero-section .btn {
+        padding: 11px 22px;
+    }
+}
+
+/* Founder Section Background */
+.founder-section {
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Founder Profile Image */
+.founder-section img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    object-fit: cover;
+
+    border: 3px solid #A91D2A;
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 0 0 5px rgba(214, 163, 75, 0.10),
+        0 0 25px rgba(169, 29, 42, 0.35),
+        0 0 50px rgba(169, 29, 42, 0.12) !important;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Founder Image Hover */
+.founder-section img:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 0 5px rgba(214, 163, 75, 0.18),
+        0 0 35px rgba(216, 31, 42, 0.55),
+        0 0 65px rgba(216, 31, 42, 0.20) !important;
+}
+
+/* Founder Section Heading */
+.founder-section h2 {
+    color: #D6A34B;
+    letter-spacing: 1px;
+}
+
+/* Mobile Founder Image */
+@media (max-width: 768px) {
+
+    .founder-section img {
+        max-width: 280px;
+        height: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Premium Founder Information Card */
+.founder-section .founder-info-card {
+    position: relative;
+
+    background: linear-gradient(135deg,
+            rgba(35, 19, 25, 0.96),
+            rgba(15, 15, 21, 0.98));
+
+    border: 1px solid rgba(169, 29, 42, 0.65);
+    border-left: 4px solid #D6A34B;
+
+    border-radius: 16px;
+    padding: 2rem;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(169, 29, 42, 0.12);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Decorative Top Accent */
+.founder-section .founder-info-card::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 22px;
+
+    width: 110px;
+    height: 3px;
+
+    background: linear-gradient(90deg,
+            #D6A34B,
+            #A91D2A);
+
+    border-radius: 0 0 4px 4px;
+}
+
+/* Card Hover Effect */
+.founder-section .founder-info-card:hover {
+    border-color: rgba(214, 163, 75, 0.65);
+
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(169, 29, 42, 0.20);
+}
+
+/* Founder Role Heading */
+.founder-section .founder-info-card h3 {
+    color: #F5EDE5;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+
+    border-bottom: 1px solid rgba(214, 163, 75, 0.25);
+}
+
+/* About the Founder Heading */
+.founder-section .founder-info-card h4 {
+    color: #D6A34B;
+    margin-top: 1.5rem;
+}
+
+/* Information Labels */
+.founder-section .founder-info-card strong {
+    color: #D6A34B;
+}
+
+/* Founder Description */
+.founder-section .founder-info-card p {
+    color: #E8EDF5;
+    line-height: 1.8;
+}
+
+/* Mobile Card Adjustments */
+@media (max-width: 768px) {
+
+    .founder-section .founder-info-card {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .founder-section .founder-info-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Futuristic Founder Section Background */
+.founder-section {
+    position: relative;
+    isolation: isolate;
+
+    background:
+        radial-gradient(circle at 12% 35%,
+            rgba(169, 29, 42, 0.13),
+            transparent 42%),
+        radial-gradient(circle at 90% 75%,
+            rgba(214, 163, 75, 0.07),
+            transparent 38%),
+        linear-gradient(135deg,
+            #100C12,
+            #0B101B 70%);
+
+    border: 1px solid rgba(214, 163, 75, 0.12);
+    border-radius: 20px;
+
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtle Technology Grid */
+.founder-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(214, 163, 75, 0.035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(214, 163, 75, 0.035) 1px,
+            transparent 1px);
+
+    background-size: 35px 35px;
+    border-radius: inherit;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Founder Main Heading */
+.founder-section h2 {
+    color: #F5EDE5;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    margin-bottom: 1.5rem;
+}
+
+/* Gold Decorative Line Under Heading */
+.founder-section h2::after {
+    content: "";
+    display: block;
+
+    width: 70px;
+    height: 3px;
+
+    background: linear-gradient(90deg,
+            #A91D2A,
+            #D6A34B);
+
+    margin: 14px auto 0;
+    border-radius: 3px;
+}
+
+/* Improve Text Readability */
+.founder-section p {
+    line-height: 1.85;
+}
+
+/* Keep Profile Card and Image Above Grid */
+.founder-section img,
+.founder-section .founder-info-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile Founder Section */
+@media (max-width: 768px) {
+
+    .founder-section {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 14px;
+    }
+
+    .founder-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Booking Kiosk Header */
+.kiosk-page .hero-section {
+    position: relative;
+    isolation: isolate;
+
+    background-image:
+        linear-gradient(110deg,
+            rgba(8, 7, 12, 0.96) 0%,
+            rgba(47, 9, 20, 0.92) 50%,
+            rgba(12, 8, 15, 0.96) 100%),
+        url("../images/WelcomeBG.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 350px;
+    padding: 75px 24px !important;
+
+    border-bottom: 3px solid #D6A34B;
+
+    box-shadow:
+        inset 0 -45px 65px rgba(0, 0, 0, 0.40),
+        0 12px 35px rgba(169, 29, 42, 0.12);
+}
+
+/* Booking Header Title */
+.kiosk-page .hero-section h1 {
+    color: #F5EDE5;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.2;
+
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.75);
+}
+
+/* Decorative Gold Line */
+.kiosk-page .hero-section h1::after {
+    content: "";
+    display: block;
+
+    width: 90px;
+    height: 3px;
+
+    margin: 20px auto 0;
+
+    background: linear-gradient(90deg,
+            #A91D2A,
+            #D6A34B);
+
+    border-radius: 4px;
+}
+
+/* Booking Header Subtitle */
+.kiosk-page .hero-section .lead {
+    color: #F0C66E;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Booking Header Description */
+.kiosk-page .hero-section p:not(.lead) {
+    color: #E8DDE0;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* Mobile Booking Header */
+@media (max-width: 768px) {
+
+    .kiosk-page .hero-section {
+        min-height: 300px;
+        padding: 55px 18px !important;
+    }
+
+    .kiosk-page .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .kiosk-page .hero-section p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Booking Form Section Panels */
+.kiosk-page #bookingForm fieldset {
+    position: relative;
+
+    background: linear-gradient(135deg,
+            rgba(32, 18, 25, 0.98),
+            rgba(13, 13, 19, 0.98));
+
+    border: 1px solid rgba(169, 29, 42, 0.65) !important;
+    border-left: 4px solid #D6A34B !important;
+
+    border-radius: 16px !important;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(169, 29, 42, 0.10);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Panel Hover */
+.kiosk-page #bookingForm fieldset:hover {
+    border-color: rgba(214, 163, 75, 0.75) !important;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(169, 29, 42, 0.18);
+}
+
+/* Panel Legend */
+.kiosk-page #bookingForm fieldset legend {
+    color: #D6A34B;
+
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+
+    background: #171017;
+    border: 1px solid rgba(214, 163, 75, 0.25);
+    border-radius: 8px;
+
+    padding: 8px 16px !important;
+    margin-bottom: 1rem;
+}
+
+/* Panel Labels */
+.kiosk-page #bookingForm fieldset .form-label,
+.kiosk-page #bookingForm fieldset .form-check-label {
+    color: #F5EDE5;
+    font-weight: 500;
+}
+
+/* Optional Upgrades Description */
+.kiosk-page #bookingForm fieldset .text-muted {
+    color: #BDB0B5 !important;
+    line-height: 1.7;
+}
+
+/* Mobile Panel Adjustments */
+@media (max-width: 768px) {
+
+    .kiosk-page #bookingForm fieldset {
+        padding: 1.25rem !important;
+        border-radius: 12px !important;
+    }
+
+    .kiosk-page #bookingForm fieldset legend {
+        font-size: 1rem;
+        padding: 7px 12px !important;
+    }
+}
+
+/* Booking Text, Number and Select Fields */
+.kiosk-page #bookingForm .form-control,
+.kiosk-page #bookingForm .form-select {
+    background-color: #100D12;
+    color: #F5EDE5;
+
+    border: 1px solid #713540;
+    border-radius: 10px;
+
+    padding: 12px 15px;
+    min-height: 48px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+/* Placeholder Text */
+.kiosk-page #bookingForm .form-control::placeholder {
+    color: #A99DA3;
+    opacity: 1;
+}
+
+/* Input Hover */
+.kiosk-page #bookingForm .form-control:hover,
+.kiosk-page #bookingForm .form-select:hover {
+    border-color: #B84A55;
+}
+
+/* Gold Focus Effect */
+.kiosk-page #bookingForm .form-control:focus,
+.kiosk-page #bookingForm .form-select:focus {
+    background-color: #171017;
+    color: #FFFFFF;
+
+    border-color: #D6A34B;
+
+    box-shadow:
+        0 0 0 3px rgba(214, 163, 75, 0.18),
+        0 0 18px rgba(214, 163, 75, 0.12);
+
+    outline: none;
+}
+
+/* Dropdown Options */
+.kiosk-page #bookingForm .form-select option {
+    background-color: #171017;
+    color: #F5EDE5;
+}
+
+/* Dropdown Arrow */
+.kiosk-page #bookingForm .form-select {
+    color-scheme: dark;
+    padding-right: 2.5rem;
+}
+
+/* Checkbox Styling */
+.kiosk-page #bookingForm .form-check-input {
+    background-color: #100D12;
+    border: 2px solid #8C3440;
+
+    width: 1.2rem;
+    height: 1.2rem;
+
+    cursor: pointer;
+}
+
+/* Checkbox Checked State */
+.kiosk-page #bookingForm .form-check-input:checked {
+    background-color: #D6A34B;
+    border-color: #D6A34B;
+}
+
+/* Checkbox Focus */
+.kiosk-page #bookingForm .form-check-input:focus {
+    border-color: #D6A34B;
+    box-shadow: 0 0 0 3px rgba(214, 163, 75, 0.20);
+}
+
+/* Checkbox Label */
+.kiosk-page #bookingForm .form-check-label {
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+/* Validation Error Messages */
+.kiosk-page #bookingForm .text-danger {
+    color: #FF858D !important;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Mobile Input Adjustments */
+@media (max-width: 768px) {
+
+    .kiosk-page #bookingForm .form-control,
+    .kiosk-page #bookingForm .form-select {
+        font-size: 1rem;
+        min-height: 46px;
+    }
+}
+
+/* Shared Booking Button Styling */
+.kiosk-page #bookingForm button[type="submit"],
+.kiosk-page #bookingForm button[type="reset"] {
+    min-height: 52px;
+    padding: 12px 26px;
+
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Calculate Booking Button */
+.kiosk-page #bookingForm button[type="submit"] {
+    background: linear-gradient(135deg,
+            #A91D2A,
+            #741520);
+
+    color: #FFFFFF;
+    border: 1px solid #D6A34B;
+
+    box-shadow:
+        0 5px 18px rgba(169, 29, 42, 0.25);
+}
+
+/* Calculate Hover */
+.kiosk-page #bookingForm button[type="submit"]:hover {
+    background: linear-gradient(135deg,
+            #C62838,
+            #911D2B);
+
+    color: #FFFFFF;
+    border-color: #F0C66E;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(169, 29, 42, 0.40);
+}
+
+/* Reset Button */
+.kiosk-page #bookingForm button[type="reset"] {
+    background-color: #191117;
+    color: #F0C66E;
+
+    border: 1px solid #D6A34B;
+}
+
+/* Reset Hover */
+.kiosk-page #bookingForm button[type="reset"]:hover {
+    background-color: #322029;
+    color: #FFFFFF;
+
+    border-color: #F0C66E;
+
+    transform: translateY(-2px);
+}
+
+/* Keyboard Focus */
+.kiosk-page #bookingForm button:focus-visible {
+    outline: 3px solid #F0C66E;
+    outline-offset: 3px;
+}
+
+/* Button Press Animation */
+.kiosk-page #bookingForm button:active {
+    transform: translateY(0);
+}
+
+/* Mobile Booking Buttons */
+@media (max-width: 576px) {
+
+    .kiosk-page #bookingForm button[type="submit"],
+    .kiosk-page #bookingForm button[type="reset"] {
+        width: 100%;
+    }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .kiosk-page #bookingForm button {
+        transition: none;
+    }
+}
